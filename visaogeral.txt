@@ -1,4 +1,4 @@
-O projeto consiste em implementar features para o sistema de gerenciamento de ua padaria.
+O projeto consiste em implementar features para o sistema de gerenciamento de uma padaria.
 As features são:
 1 - Cadastro/login de funcionários 
 
