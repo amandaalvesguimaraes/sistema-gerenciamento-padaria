@@ -1,0 +1,24 @@
+PERGUNTAS GERAIS
+1. Para quais tipos de funcionalidade o sistema deverá prover suporte?
+2. Quais serão os usuários do sistema?
+3. Existem restrições que devemos obedecer para desenvolver o sistema?
+4. Qual a ordem de prioridade entre as funcionalidades?
+
+
+SOBRE CADASTRO/LOGIN DE FUNCIONÁRIOS
+1. Qual o propósito de um funcionário realizar um login? O que ele vai ter acesso ao realizar o login?
+2. Quais são as informações necessárias para o cadastro de um funcionário? Todas elas são obrigatórias? 
+3. Quais as informações para fazer o login? (email, cpf, senha...)
+4. Caso seja necessária uma senha, o funcionário precisará criar alguma senha para o cadastro ou o sistema irá gerar essa senha?
+5. Há alguma restrição em especial para esta feature?
+
+
+CRUD
+1. Só confirmando, CRUD é: Cadastro, Procura, Atualização e Remoção de produtos, certo?
+2. Quais serão os campos necessários para preencher o cadastro?
+3. Para a procura/atualização/remoção, qual será a chave que utilizaremos para identificar o produto e realizar essas operações?
+4. Há alguma restrição em especial para esta feature?
+5. Confirmando exemplos de operações que dão erro: cadastrar um produto já cadastrado, atualizar um produto que não existe, atualizar um produto com um dado errado ou referente a um produto já existente, remover um produto que não existe.
+6. A atualização de produtos permitirá atualizar todos os dados referentes ao produto ou há um dado que não poderia ser modificado?
+7. Quais informações aparecerão ao procurar um produto?
+
