@@ -22,3 +22,30 @@ CRUD
 6. A atualização de produtos permitirá atualizar todos os dados referentes ao produto ou há um dado que não poderia ser modificado?
 7. Quais informações aparecerão ao procurar um produto?
 
+
+SOBRE CRUD (2):
+1. Pode acontecer de cadastrar um produto com uma data de validade que já passou?
+
+
+SOBRE REGISTRO DE VENDA DE PRODUTOS
+1. Quais informações são necessárias para registrar a venda dos produtos?
+2. A feature vai funcionar como uma espécia de caixa de supermercado?
+3. Se a resposta anterior foi sim, vai ter aquelas funcionalidades de calcular valor total, calcular valor de troco, etc?
+4. Há alguma restrição para essa feature?
+5. Pode haver o cancelamento de uma venda ou alguma situação em que é necessário excluir o registro de uma venda?
+
+
+SOBRE AVISO DE VENCIMENTO DE PRODUTOS
+1. Essa feature apenas vai listar todos os produtos que vencem no dia atual ou podemos definir uma data e checar os produtos que vencerão naquele determinado dia?
+2. Ele vai funcionar como um checklist? Por exemplo: "PÃO VENCE NO DIA ATUAL - REMOVIDO DA PRATELEIRA? [S/N]". Se sim, o que aconteceria se fossemos para o dia seguinte e ainda não tivessemos removido o pão da prateleira?
+3. O que acontece depois do dia de vencimento de um produto? O sistema remove automaticamente o produto? Ou o usuário teria que remover o produto manualmente ou atualizar a data de vencimento?
+4. Há alguma restrição em específico para essa feature?
+
+
+SOBRE REGISTRO DE ENTRADA E SAÍDA DE FUNCIONÁRIOS
+1. Qual o percurso que o funcionário fará pelo sistema até que ele registre sua entrada? Complementando a pergunta, basta ele fazer apenas o login ou, além do login, clicar em algum botão para confirmar sua entrada?
+2. Qual o percurso que o funcionário fará pelo sistema até que ele registre sua saída?
+3. Trataremos casos em que um funcionário pode se esquecer de registrar sua saída? Se sim, qual o protocolo para esse caso?
+4. Quais informações aparecerão na tela de registro de entrada e saída de funcionários?
+5. Há alguma restrição em específico para essa feature?
+
