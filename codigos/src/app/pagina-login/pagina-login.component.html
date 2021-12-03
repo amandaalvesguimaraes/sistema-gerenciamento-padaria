@@ -1,1 +1,9 @@
-<p>pagina-login works!</p>
+<h3>Login de funcionários</h3>
+<input [(ngModel)] = "nome">
+<input [(ngModel)] = "senha">
+<button (click)="salvarNome()"> Salvar Nome </button>
+
+<p>Lista de nomes salvos</p>
+<ul *ngFor="let nome of nomes">
+    <li> <p>{{nome}} {{senha}}</p> </li>
+</ul>
