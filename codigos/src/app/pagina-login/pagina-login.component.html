@@ -1,9 +1,14 @@
 <h3>Login de funcionários</h3>
-<input [(ngModel)] = "nome">
-<input [(ngModel)] = "senha">
-<button (click)="salvarNome()"> Salvar Nome </button>
 
-<p>Lista de nomes salvos</p>
-<ul *ngFor="let nome of nomes">
-    <li> <p>{{nome}} {{senha}}</p> </li>
-</ul>
+<h5>Email:</h5>
+<input [(ngModel)] = "emailLogin">
+<h5>Senha:</h5>
+<input [(ngModel)] = "senhaLogin">
+
+<br><br>
+
+<button (click)="getFuncionario()">Fazer login</button>
+
+<br><br>
+
+<button routerLink="/cadastro">Cadastrar funcionário</button>

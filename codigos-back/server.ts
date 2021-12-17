@@ -1,12 +1,20 @@
 import express from 'express';
 import funcionarioRouter from './src/routes/funcionario.routes';
 
-const app = express();
-const port = 3000;
+const server = express();
+const port = 8080;
 
-app.use(express.json());
-app.use('/funcionarios', funcionarioRouter);
+server.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    next();
+});
 
-app.listen(port, () => {
+server.use(express.json());
+
+server.use('/funcionarios', funcionarioRouter);
+
+server.listen(port, () => {
     console.log(`Servidor executando na porta ${port}.`);
 });
