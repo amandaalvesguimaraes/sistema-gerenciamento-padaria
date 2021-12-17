@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FuncionarioService } from './../services/funcionario.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-pagina-login',
@@ -7,34 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PaginaLoginComponent implements OnInit {
-  nome: string;
-  nomes: string[];
-  senha: string;
-  senhas: string[];
+  emailLogin: string = "";
+  senhaLogin: string = "";
 
 
-  constructor() {
-    this.nome = "";
-    this.senha = "";
-    this.nomes = [];
-    this.senhas = [];
-  }
+  constructor(private funcionarioService: FuncionarioService, private router: Router) { }
 
   ngOnInit(): void {
-    
+    this.emailLogin = "";
+    this.senhaLogin = "";
   }
 
-  salvarNome() {
-    if (this.nome.length >= 3) {
-      this.nomes.push(this.nome);
-      this.nome = "";
-    }
-  }
-
-  salvarSenha() {
-    if (this.senha.length >= 3) {
-      this.senhas.push(this.senha);
-      this.senha = "";
+  getFuncionario() {
+    if (this.emailLogin == "" || this.senhaLogin == "") {
+      alert("Preencha todos os campos!");
+    } else {
+      this.funcionarioService.getFuncionario(this.emailLogin, this.senhaLogin).subscribe({
+        next: (message) => {
+          this.router.navigate(['/home']);
+        },
+        error: (err) => {
+          alert(err.error.err);
+        }
+      })
     }
   }
 
