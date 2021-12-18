@@ -1,6 +1,6 @@
 import { Produto } from "../models/produto";
 
-export class ProdutoController {
+ export class ProdutoController {
     produtos: Produto[];
     count : number;
 
@@ -20,7 +20,7 @@ export class ProdutoController {
 
     createProduto(nome : string, preco: number, quantidade: number, validade: Date) : number {
         if (this.produtos.find(u => u.nome == nome)) {
-            return 1; //nomes iguais
+            return 1; //nomes iguais :)
         } else {
             let dataAtual = new Date();
             if (validade < dataAtual) {
