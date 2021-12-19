@@ -12,4 +12,9 @@
 
 <br><br>
 
-<button>Registro de entrada e saída de funcionários</button>
+<button routerLink="/entradasaida" >Registro de entrada e saída de funcionários</button>
+
+<br><br>
+<button routerLink="/" (click)="sair()">Sair</button>
+<a>Confirme o email: </a>
+<input type="text" [(ngModel)] = "email">

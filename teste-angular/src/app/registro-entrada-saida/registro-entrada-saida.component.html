@@ -1,0 +1,13 @@
+<h3>REGISTRO DE ENTRADA E SAÍDA</h3>
+<br>
+<a>Digite seu email: </a>
+<input type="text" [(ngModel)] = "funcionario_atual">
+<button (click) = "getRegistros()"> Verificar </button>
+
+<div>
+    <ul *ngFor="let registros of registros_entrada_saida">
+        <ul>
+            {{registros}}
+        </ul>
+    </ul>
+</div>

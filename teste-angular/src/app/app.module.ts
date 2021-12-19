@@ -11,6 +11,7 @@ import { DatePipe } from '@angular/common';
 import { PaginaLoginComponent } from './pagina-login/pagina-login.component';
 import { PaginaHomeComponent } from './pagina-home/pagina-home.component';
 import { PaginaCadastroComponent } from './pagina-cadastro/pagina-cadastro.component';
+import { RegistroEntradaSaidaComponent } from './registro-entrada-saida/registro-entrada-saida.component';
 
 
 
@@ -21,7 +22,8 @@ import { PaginaCadastroComponent } from './pagina-cadastro/pagina-cadastro.compo
     VencimentoProdutosComponent,
     PaginaLoginComponent,
     PaginaHomeComponent,
-    PaginaCadastroComponent
+    PaginaCadastroComponent,
+    RegistroEntradaSaidaComponent
   ],
   imports: [
     BrowserModule,
