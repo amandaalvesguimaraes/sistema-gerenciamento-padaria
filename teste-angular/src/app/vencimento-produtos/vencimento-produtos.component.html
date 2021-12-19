@@ -1,0 +1,24 @@
+<h1 id="titulo">VENCIMENTO DE PRODUTOS</h1>
+
+<div>
+    <a> Selecione uma data: </a>
+    <input [(ngModel)] = "validade" type="date">
+    <button class="botoes" style="margin: 0 15px" (click)="searchProduto()">Buscar produtos</button>
+    <br>
+    <ul *ngFor="let produto of produtosexibicao">
+        <ul>
+            <p> Nome: {{produto.nome }} </p>
+        </ul>
+    </ul>
+</div>
+<br>
+<div>
+    <a>Produtos fora da validade</a>
+    <button class="botoes" style="margin: 0 15px" (click)="searchProdutoFV()">Verificar</button>
+    <br>
+    <ul *ngFor="let produto of produtosexibicaoFV">
+        <ul>
+            <p> Nome: {{produto.nome }} </p>
+        </ul>
+    </ul>
+</div>

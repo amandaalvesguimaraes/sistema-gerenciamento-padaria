@@ -1,0 +1,18 @@
+<h3>Cadastro de Funcionários</h3>
+
+<h4>Insira seus dados abaixo:</h4>
+
+<h5>Nome:</h5>
+<input type="text" [(ngModel)] = "nome">
+
+<h5>Email:</h5>
+<input type="text" [(ngModel)] = "email" >
+
+<h5>CPF:</h5>
+<input type="text" [(ngModel)] = "cpf" >
+
+<h5 id='senha'>Senha de acesso:</h5>
+<input type="text" [(ngModel)] = "senha">
+<label for='senha'>Sua senha precisa ter 4 ou mais caracteres</label>
+
+<button (click)="criarFuncionario()">Finalizar cadastro</button>
