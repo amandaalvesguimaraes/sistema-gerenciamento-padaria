@@ -5,13 +5,16 @@ import { PaginaCadastroComponent } from './pagina-cadastro/pagina-cadastro.compo
 import { PaginaHomeComponent } from './pagina-home/pagina-home.component';
 import { CrudinicialComponent } from './crudinicial/crudinicial.component';
 import { VencimentoProdutosComponent } from './vencimento-produtos/vencimento-produtos.component';
+import { PaginaRegistroVendasComponent } from './pagina-registro-vendas/pagina-registro-vendas.component';
+
 
 const routes: Routes = [
   { path: '', component: PaginaLoginComponent },
   { path: 'cadastro', component: PaginaCadastroComponent },
   { path: 'home', component: PaginaHomeComponent },
   { path: 'crud', component: CrudinicialComponent},
-  { path: 'vencimento', component : VencimentoProdutosComponent}
+  { path: 'vencimento', component : VencimentoProdutosComponent},
+  { path: 'vendas', component : PaginaRegistroVendasComponent}
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import express from 'express';
 import { Server } from 'http';
 import produtoRouter from './src/routes/produto.routes';
 import funcionarioRouter from './src/routes/funcionario.routes'
+import vendaRouter from './src/routes/venda.routes'
 
 
 const server = express();
@@ -19,6 +20,7 @@ const port = 3000;
 server.use(express.json());
 server.use("/users", produtoRouter); //produtos
 server.use('/funcionarios', funcionarioRouter);
+server.use('/vendas', vendaRouter);//vendas
 
 
 

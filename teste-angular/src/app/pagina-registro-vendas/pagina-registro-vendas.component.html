@@ -1,0 +1,27 @@
+<h1 id="titulo">REGISTRO DE VENDAS</h1>
+
+<br>
+<div>
+<h2>Realizar venda</h2>
+
+<p>Insira o pagamento</p>
+<input class="inputs" type= "number"[(ngModel)]="pagamento">
+
+<p>Insira a quantidade</p>
+<input class="inputs" type= "number" [(ngModel)]="quantidade">
+
+<div>
+    <h2>Buscar Produtos</h2>
+    <button class="botoes" (click) = "getAllProdutos()" >Pesquisar</button>
+    <ul *ngFor="let produto of produtos">
+        <ul>
+            <p> Nome: {{produto.nome }} </p>
+            <p> Preço: R${{produto.preco}} </p>
+            <p> Quantidade: {{produto.quantidade}} </p>
+            <p> Data de validade: {{produto.validade}}</p>
+            <button class="botoes" (click) = "createVenda()">Vender</button>
+            
+        </ul>
+    </ul>
+</div>
+</div>
