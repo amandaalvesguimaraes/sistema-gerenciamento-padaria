@@ -25,7 +25,8 @@ export class PaginaHomeComponent implements OnInit {
       error: () => {
         alert("Nao foi possivel obter os registros de entrada e saída");
       }
-  })
+    })
+    this.email = this.entradasaidaService.getFuncionarioAtual();
   }
 
   getFuncionarioAtual() : string {

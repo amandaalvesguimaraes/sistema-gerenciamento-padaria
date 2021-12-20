@@ -31,6 +31,7 @@ export class PaginaLoginComponent implements OnInit {
         next: (message) => {
           let horaAtual = (new Date()).toString();
           this.entradasaidaService.updateRegistro(this.emailLogin, 0, horaAtual, "-", "3").subscribe();
+          this.entradasaidaService.setFuncionario(this.emailLogin); //
           this.entradasaidaService.getAllEntradasaidas().subscribe();
           this.router.navigate(['/home']);
         },

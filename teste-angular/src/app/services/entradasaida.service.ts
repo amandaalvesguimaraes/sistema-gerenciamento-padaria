@@ -8,10 +8,20 @@ import { Entradasaida } from '../models/entradasaida';
     providedIn: 'root'
   })
   export class EntradasaidaService {
+
+    email : string = "";
   
     constructor(private http : HttpClient) {
   
   
+     }
+
+     getFuncionarioAtual() : string {
+      return this.email;
+     }
+
+     setFuncionario(email : string) {
+       this.email = email;
      }
   
     getAllEntradasaidas() : Observable<Entradasaida[]> {
