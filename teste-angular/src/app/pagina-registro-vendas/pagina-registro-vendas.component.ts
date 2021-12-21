@@ -76,7 +76,12 @@ import { Venda } from '../models/venda';
           this.pagamento = 0;
           this.quantidade = 0;
           alert(message.Message);
-          return this.produtosService.updateProduto(produto.nome, produto.preco, estoque, produto.validade).subscribe();//atualizando o estoque dps da compra
+          return this.produtosService.updateProduto(produto.nome, produto.preco, estoque, produto.validade).subscribe({
+            next: (message) =>{
+              this.getAllProdutos();
+              this.produtosexibicao = [];
+            }
+          });//atualizando o estoque dps da compra
 
         },
         error:(err)=>{
