@@ -5,6 +5,8 @@ import { environment } from 'src/environments/environment';
 import { Produto } from "../models/produto";
 import { Venda } from "../models/venda";
 
+
+
 @Injectable({
     providedIn: 'root'
 })
@@ -23,10 +25,12 @@ export class VendasService{
     }
 
     createVenda(produto: Produto, pagamento: number, quantidade: number): Observable<any>{
+        //this.updateProduto(produto.nome,produto.preco,produto.quantidade-quantidade,produto.validade);
         const venda = new Venda(0, produto, quantidade, produto.preco, pagamento, pagamento - produto.preco);
         return this.http.post<any>(`${environment.url}/vendas`, venda);
 
     }
+   
 
   
  

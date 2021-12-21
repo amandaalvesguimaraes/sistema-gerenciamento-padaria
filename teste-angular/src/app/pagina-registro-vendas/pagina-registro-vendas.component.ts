@@ -32,16 +32,17 @@ import { Venda } from '../models/venda';
       this.produto = new Produto(0,"",0,0,new Date());
       this.pagamento = 0;
       this.quantidade = 0;
-      this.getAllVendas();
+      //this.getAllVendas();
       //this.getAllProdutos();
         
     }
-
     getAllVendas(){
       return this.vendasService.getAllVendas().subscribe({
 
         next: (vendas) =>{
-          this.vendas= vendas;
+          console.log(vendas);
+          this.vendas= Object.values(vendas);
+          this.vendas = Object.values(this.vendas[0]);
 
         },
         error: () =>{
@@ -61,19 +62,21 @@ import { Venda } from '../models/venda';
         },
         error: () => {
           alert("Nao foi possivel obter os produtos no servidor");
-        }
+        } 
       });
     }
 
-    createVenda(){
+    createVenda(produto: Produto){
 
-      this.vendasService.createVenda(this.produto,this.pagamento,this.quantidade).subscribe({
+
+      this.vendasService.createVenda(produto,this.pagamento,this.quantidade).subscribe({
         next: (message) =>{
-          //this.produtosService.updateProduto(this.produto.nome, this.produto.preco, this.produto.quantidade-this.quantidade, this.produto.validade);
+          const estoque: number = produto.quantidade - this.quantidade;
           this.produto = new Produto(0,"",0,0,new Date());
           this.pagamento = 0;
           this.quantidade = 0;
           alert(message.Message);
+          return this.produtosService.updateProduto(produto.nome, produto.preco, estoque, produto.validade).subscribe();//atualizando o estoque dps da compra
 
         },
         error:(err)=>{
@@ -95,6 +98,8 @@ import { Venda } from '../models/venda';
       alert("Nenhum produto encontrado");
       return false;
     }
+
+    
 
 
 

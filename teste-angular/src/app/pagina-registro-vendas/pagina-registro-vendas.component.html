@@ -2,13 +2,6 @@
 
 <br>
 <div>
-<h2>Realizar venda</h2>
-
-<p>Insira o pagamento</p>
-<input class="inputs" type= "number"[(ngModel)]="pagamento">
-
-<p>Insira a quantidade</p>
-<input class="inputs" type= "number" [(ngModel)]="quantidade">
 
 <div>
     <h2>Buscar Produtos</h2>
@@ -19,9 +12,31 @@
             <p> Preço: R${{produto.preco}} </p>
             <p> Quantidade: {{produto.quantidade}} </p>
             <p> Data de validade: {{produto.validade}}</p>
-            <button class="botoes" (click) = "createVenda()">Vender</button>
+            <p>Insira o pagamento</p>
+            <input class="inputs" type= "number"[(ngModel)]="pagamento">
+            <p>Insira a quantidade</p>
+            <input class="inputs" type= "number" [(ngModel)]="quantidade">
+            <button class="botoes" (click) = "createVenda(produto)">Vender</button>
             
         </ul>
     </ul>
+    
+</div>
+<div>
+
+    <br><br>
+    <h2>Buscar Vendas</h2>
+    <button class ="botoes" (click) = "getAllVendas()">Obter vendas</button>
+    <ul *ngFor="let venda of vendas">
+        <ul>
+            <p> Nome: {{venda.produto.nome }} </p>
+            <p> Preço: R${{venda.preco}} </p>
+            <p> Pagamento: R${{venda.pagamento}} </p>
+            <p> Quantidade: {{venda.quantidade}} </p>
+            <p> Troco: R${{venda.troco}} </p>
+            <br>
+        </ul>
+    </ul>
+    
 </div>
 </div>
