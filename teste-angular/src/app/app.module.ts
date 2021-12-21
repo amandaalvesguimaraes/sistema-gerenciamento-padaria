@@ -12,6 +12,7 @@ import { PaginaLoginComponent } from './pagina-login/pagina-login.component';
 import { PaginaHomeComponent } from './pagina-home/pagina-home.component';
 import { PaginaCadastroComponent } from './pagina-cadastro/pagina-cadastro.component';
 import { PaginaRegistroVendasComponent } from './pagina-registro-vendas/pagina-registro-vendas.component';
+import { RegistroEntradaSaidaComponent } from './registro-entrada-saida/registro-entrada-saida.component';
 
 
 
@@ -23,7 +24,8 @@ import { PaginaRegistroVendasComponent } from './pagina-registro-vendas/pagina-r
     PaginaLoginComponent,
     PaginaHomeComponent,
     PaginaCadastroComponent,
-    PaginaRegistroVendasComponent
+    PaginaRegistroVendasComponent,
+    RegistroEntradaSaidaComponent
   ],
   imports: [
     BrowserModule,
