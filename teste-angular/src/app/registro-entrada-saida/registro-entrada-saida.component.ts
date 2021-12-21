@@ -28,12 +28,16 @@ export class RegistroEntradaSaidaComponent implements OnInit {
 
   getRegistros() {
     let c : number = 0;
+    let t : boolean = false;
     this.registros_entrada_saida = [];
     for (let i: number  = 0; i < this.entradasaidas.length; i++) {
       if (this.entradasaidas[i].email == this.funcionario_atual) {
-        
+        t = true;
         this.registros_entrada_saida = this.entradasaidas[i].registrosanteriores;
       }
+    }
+    if (!t) {
+      alert("Funcionario nao encontrado!");
     }
   }
 
