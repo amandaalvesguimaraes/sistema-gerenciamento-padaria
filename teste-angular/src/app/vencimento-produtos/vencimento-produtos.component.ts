@@ -17,9 +17,6 @@ export class VencimentoProdutosComponent implements OnInit {
   validadeT : string | null = "";
   validade: Date = new Date();
 
-  precoNovo: number = 0;
-  quantidadeNovo: number = 0;
-  validadeNovo: Date = new Date();
 
   nomeBusca : string = "";
 
@@ -33,15 +30,8 @@ export class VencimentoProdutosComponent implements OnInit {
   constructor(private produtosServices: ProdutosService, public datepipe: DatePipe) { }
 
   ngOnInit(): void {
-    this.nome = "";
-    this.preco = 0;
-    this.quantidade = 0;
     this.validade = new Date();
     this.validadeT = "";
-
-    this.precoNovo = 0;
-    this.quantidadeNovo = 0;
-    this.validadeNovo = new Date();
     this.getAllProdutos();
   }
  
@@ -59,7 +49,7 @@ export class VencimentoProdutosComponent implements OnInit {
   }
 
 
-  searchProdutoFV() {
+  searchProdutoFV() { //procurar produto fora da validade
     let j : number = 0;
     this.produtosexibicaoFV = [];
     for (let i : number = 0; i < this.produtos.length; i++) {
@@ -93,21 +83,5 @@ export class VencimentoProdutosComponent implements OnInit {
     }
     
   }
-
-  deleteProduto(nomeProduto : string) {
-    return this.produtosServices.deleteProduto(nomeProduto).subscribe({
-      next: () => {
-        alert("Produto removido com sucesso");
-        this.getAllProdutos();
-        this.produtosexibicao = [];
-      },
-      error: (err) => {
-        alert(err.error.Message);
-      }
-    });
-  }
-
- 
-
 
 }

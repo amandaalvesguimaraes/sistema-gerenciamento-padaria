@@ -56,7 +56,7 @@ import { Produto } from "../models/produto";
         let produtoIndex = this.produtos.findIndex(u => u.nome == nome);
 
         if (produtoIndex == -1) {
-            return 1; //usuario nao encontrado
+            return 1; //produto nao encontrado
         }
 
         let dataAtual = new Date();

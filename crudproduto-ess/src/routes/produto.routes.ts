@@ -79,7 +79,7 @@ produtoRouter.route("/:nome")
 
         switch(updateProduto) { 
             case 1: { 
-                return res.status(404).json({Message: "Erro. Usuário não encontrado."});
+                return res.status(404).json({Message: "Erro. Produto não encontrado."});
             } 
             case 2: { 
                 return res.status(409).json({Message: "Erro. Data de validade inválida."});
